@@ -1,1 +1,9 @@
-pandas numpy matplotlib seaborn scikit-learn statsmodels lightgbm torch chronos-forecasting
+pandas 
+numpy 
+matplotlib 
+seaborn 
+scikit-learn 
+statsmodels 
+lightgbm 
+torch 
+chronos-forecasting
