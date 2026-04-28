@@ -59,18 +59,15 @@ The workflow is divided into 6 strictly designed phases to prevent data leakage:
 
 Results obtained on the Test set (28-day forecast horizon) evaluating the RMSE (Root Mean Squared Error) metric:
 
-| Rank | Model | RMSE | MAE | RMSE Reduction (%)* | Computational Cost |
+| Rank | Model | RMSE | MAE | Computational Cost |
 |:---:|:---|:---:|:---:|:---:|:---|
-|  | **LSTM Global (PyTorch)** | 8.62| 8.49 | -1.18% | Very High (GPU) |
-|  | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | **35.48%** | Medium (Local) |
-|  | **SARIMA (1,1,1)(1,1,1,7)** | 9.05 | 5.66 | 34.95% | Low (Local) |
-|  | **Holt-Winters (Add+Add)** | 9.10 | 5.81 | 34.61% | Low (Local) |
-|  | **LightGBM (Global, Lag+Rolling)** | 9.49 | 6.22 | 31.78% | Medium (Global) |
-|  | **Chronos (Zero-Shot, T5)** | *Eval* | *Eval* | - | High (Pre-trained) |
-|  | **Seasonal Naïve (Baseline)** | 13.92| 8.48 | 0.00% | Immediate |
-
-
-*(%) Calculated relative to the Seasonal Naïve baseline.*
+|  | **LSTM Global (PyTorch)** | 8.62| 5.44 | Very High (GPU) |
+|  | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | Medium (Local) |
+|  | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 Low (Local) |
+|  | **Holt-Winters (Add+Add)** | 9.10 | 5.81 | Low (Local) |
+|  | **LightGBM (Global, Lag+Rolling)** | 9.49 | 6.22 | Medium (Global) |
+|  | **Chronos (Zero-Shot, T5)** | 10.52 | 6.84 | High (Pre-trained) |
+|  | **Seasonal Naïve (Baseline)** | 13.92| 8.48 | Immediate |
 
 ### Main Conclusion (The Trade-off)
 The injection of expert knowledge (Feature Engineering of exogenous variables) into robust statistical models (**SARIMAX**) outperformed the brute force of Deep Learning on this specific subset. However, to scale to thousands of products simultaneously, **LightGBM** offers the best balance between production-grade accuracy and computational cost.
