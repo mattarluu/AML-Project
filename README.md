@@ -63,7 +63,7 @@ Results obtained on the Test set (28-day forecast horizon) evaluating the RMSE (
 |:---:|:---|:---:|:---:|:---|
 |  | **LSTM Global (PyTorch)** | 8.62| 5.44 | Very High (GPU) |
 |  | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | Medium (Local) |
-|  | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 Low (Local) |
+|  | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 | Low (Local) |
 |  | **Holt-Winters (Add+Add)** | 9.10 | 5.81 | Low (Local) |
 |  | **LightGBM (Global, Lag+Rolling)** | 9.49 | 6.22 | Medium (Global) |
 |  | **Chronos (Zero-Shot, T5)** | 10.52 | 6.84 | High (Pre-trained) |
