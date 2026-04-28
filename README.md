@@ -60,7 +60,7 @@ The workflow is divided into 6 strictly designed phases to prevent data leakage:
 Results obtained on the Test set (28-day forecast horizon) evaluating the RMSE (Root Mean Squared Error) metric:
 
 | Rank | Model | RMSE | MAE | Computational Cost |
-|:---:|:---|:---:|:---:|:---:|:---|
+|:---:|:---|:---:|:---:|:---|
 |  | **LSTM Global (PyTorch)** | 8.62| 5.44 | Very High (GPU) |
 |  | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | Medium (Local) |
 |  | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 Low (Local) |
