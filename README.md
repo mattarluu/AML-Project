@@ -61,13 +61,13 @@ Results obtained on the Test set (28-day forecast horizon) evaluating the RMSE (
 
 | Rank | Model | RMSE | MAE | Computational Cost |
 |:---:|:---|:---:|:---:|:---|
-|  | **LSTM Global (PyTorch)** | 8.62| 5.44 | Very High (GPU) |
-|  | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | Medium (Local) |
-|  | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 | Low (Local) |
-|  | **Holt-Winters (Add+Add)** | 9.10 | 5.81 | Low (Local) |
-|  | **LightGBM (Global, Lag+Rolling)** | 9.49 | 6.22 | Medium (Global) |
-|  | **Chronos (Zero-Shot, T5)** | 10.52 | 6.84 | High (Pre-trained) |
-|  | **Seasonal Naïve (Baseline)** | 13.92| 8.48 | Immediate |
+| 1 | **LSTM Global (PyTorch)** | 8.62| 5.44 | Very High (GPU) |
+| 2 | **SARIMAX (Feature-Engineered)** | 8.98 | 5.55 | Medium (Local) |
+| 3 | **SARIMA (1,1,1)(1,1,1,7)** | 9.06 | 5.66 | Low (Local) |
+| 4 | **Holt-Winters (Add+Add)** | 9.10 | 5.81 | Low (Local) |
+| 5 | **LightGBM (Global, Lag+Rolling)** | 9.49 | 6.22 | Medium (Global) |
+| 6 | **Chronos (Zero-Shot, T5)** | 10.52 | 6.84 | High (Pre-trained) |
+| 7 | **Seasonal Naïve (Baseline)** | 13.92| 8.48 | Immediate |
 
 ### Main Conclusion (The Trade-off)
 The injection of expert knowledge (Feature Engineering of exogenous variables) into robust statistical models (**SARIMAX**) outperformed the brute force of Deep Learning on this specific subset. However, to scale to thousands of products simultaneously, **LightGBM** offers the best balance between production-grade accuracy and computational cost.
